@@ -11,6 +11,8 @@ var MAX_BAR_HEIGHT = 150;
 var BAR_GAP = 50;
 var STEP_X = BAR_GAP + BAR_WIDTH;
 var START_BAR_POS = CLOUD_X + BAR_WIDTH;
+var BAR_GAP_X = CLOUD_X + 2 * GAP;
+var BAR_GAP_Y = CLOUD_Y + 3 * GAP;
 
 var renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
@@ -54,9 +56,9 @@ window.renderStatistics = function (ctx, players, times) {
   ctx.font = '16px PT Mono';
   ctx.textBaseline = 'handing';
 
-  ctx.fillText('Ура вы победили!', CLOUD_X + 2 * GAP, CLOUD_Y + 3 * GAP);
+  ctx.fillText('Ура вы победили!', BAR_GAP_X, BAR_GAP_Y);
   ctx.textBaseline = 'middle';
-  ctx.fillText('Список результатов:', CLOUD_X + 2 * GAP, CLOUD_Y + 3 * GAP + FONT_GAP);
+  ctx.fillText('Список результатов:', BAR_GAP_X, BAR_GAP_Y + FONT_GAP);
 
   var maxTime = getMaxElement(times);
 
