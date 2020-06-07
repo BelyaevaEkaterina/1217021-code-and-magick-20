@@ -16,7 +16,7 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template')
 
 var renderRandomValue = function (arr) {
   var lastIndex = arr.length - 1;
-  var i = Math.round(Math.random() * lastIndex) ;
+  var i = Math.round(Math.random() * lastIndex);
 
   return arr[i];
 };
